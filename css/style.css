@@ -1,0 +1,10 @@
+form{
+    text-align: center;
+    margin-top: 30px;
+}
+section#date-picker {
+    margin: 20px 0;
+}
+button.btn.btn-info.btn-lg {
+    margin: 10px 0;
+}

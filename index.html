@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript another project</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="js/jquery-ui.css">
+   <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body> 
+  
+ 
+  <section id="accordion-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                  <div id="accordion">
+                      <h3>accordion 1</h3>
+                      <div>
+                          <p>nknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan</p>
+                      </div>
+                      <h3>accordion 2</h3>
+                      <div>
+                          <p>nknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan</p>
+                      </div>
+                      <h3>accordion 3</h3>
+                      <div>
+                          <p>nknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchan</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+  <section id="date-picker">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4">
+                  <form>
+                      <label for="datepicker">DATE</label>
+                      <input type="text" id="datepicker" class="form-control input-lg">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section id="copy-paste-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4">
+                  <p><strong>NAME:</strong><span class="my">Mehedi Hasan</span></p>
+                  <p><strong>EMAIL:</strong><span class="emailmy">mehedihasan1179@gmail.com</span></p>
+                  <p><strong>TEXT:</strong><span class="mytext">em ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nibh ultricies, mollis mauris quis, condimentum ante. Phasellus eget dapibus risus. Phasellus nec neque rhoncus, tincidunt diam sed, pulvinar orci. Proin et suscipit ante, quis egestas dolor. Aenean sit amet urna turpis. Donec porttitor metus eget iaculis elementum. Duis dictum eu lorem non molestie. Vivamus fermentum lobortis placerat. Aenean imperdiet porta le</span></p>
+              </div>
+              <div class="col-sm-2">
+                  <button id="paste-name" class="btn btn-info btn-lg">paste name</button>
+                  <button id="paste-email" class="btn btn-info btn-lg">paste email</button>
+                  <button id="paste-text" class="btn btn-info btn-lg">paste text</button>
+              </div>
+              <div class="col-sm-6">
+                  <form>
+                      <div class="form-group">
+                          <input id="namepaste" type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <input id="emailpaste" type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <textarea id="pastetext" cols="75" rows="10" class="form-control"></textarea>
+                      </div>
+                      <button id="clr" class="btn btn-info btn-lg pull-left">clear</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+  //accordion-area
+  $(function(){
+        $("#accordion").accordion();
+  })
+  
+  //date-picker
+  $(function(){
+    $("#datepicker").datepicker();
+  })
+    
+  //copy-paste-area
+  $(function(){
+     $("#paste-name").click(function(){
+         var a = $(".my").text();
+         $("#namepaste").val(a).css("color","green");
+     })
+      $("#paste-email").click(function(){
+         var b = $(".emailmy").text();
+         $("#emailpaste").val(b).css("color","green");
+     })
+       $("#paste-text").click(function(){
+         var c = $(".mytext").text();
+         $("#pastetext").val(c).css("color","green");
+     })
+       
+     
+  })
+  
+  $(function(){
+   $("#clr").click(function(){
+       var clr = $("").text();
+          $("#namepaste").val(clr);
+       var clt = $("").text();
+           $("#emailpaste").val(clt);
+       var cly = $("").text();
+           $("#pastetext").val(cly);
+      })
+})
+  
+</script>
+</body>
+
+</html>
